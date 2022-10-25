@@ -6,7 +6,6 @@ function Productos() {
 
   const productos = JSON.parse(localStorage.getItem("productos"));
 
-
   return (
     <div className="cont-productos">
         {
@@ -18,6 +17,7 @@ function Productos() {
                 modelo={item.modelo}
                 precio={item.precio}
                 caracteristicas={item.caracteristicas}
+                id={item.id}
               />
             )
           )
