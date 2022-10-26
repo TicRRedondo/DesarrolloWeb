@@ -1,6 +1,6 @@
 #card-product{
     width: 285px;
-    height: 330px;
+    height: 380px;
     margin: 0 0 24px;
     padding: 0 15px;
     font-weight: 400;
@@ -10,12 +10,13 @@
 }
 
 .card-scd{
-    height: 100%!important;
+    height: 80%!important;
     position: relative;
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(0, 0, 0, 0.255);
     border-radius: 0.25rem;
+    margin-bottom: 10px;
 }
 .img-prod{
     border-top-right-radius: calc(0.25rem -1px);

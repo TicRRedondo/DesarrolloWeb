@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import BarraNavegacion from './componentes/front-static/barraNavegacion';
+import BarraNavegacion from './componentes/navbar/barraNavegacion';
 import listaProductos from "./componentes/listaproductos/listaProductos.json"
 import Productos from './componentes/listaproductos/productos'
 

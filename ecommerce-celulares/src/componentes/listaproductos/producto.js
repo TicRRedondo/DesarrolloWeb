@@ -1,5 +1,5 @@
 import './producto.css';
-import Button from 'react-bootstrap/Button';
+import Boton from '../botones/boton';
 
 function Producto(props) {
 
@@ -19,7 +19,7 @@ function Producto(props) {
       productosAdicionados.push(productoAdicionado)
       localStorage.setItem("carrito", JSON.stringify(productosAdicionados))
     }
-      
+
 
   }
 
@@ -35,9 +35,15 @@ function Producto(props) {
           <h5 className='price'>$ {props.precio}</h5>
           <p className='description'>{props.caracteristicas}</p>
         </div>
-        <Button variant="outline-success" onClick={() => adicionarCarrito(props)}>Comprar</Button>
       </div>
+      <div className='cont-btn'>
+        {//<Button variant="outline-success" onClick={() => adicionarCarrito(props)}>Comprar</Button>
+        }
+        <Boton nombre='Agregar' click={()=>adicionarCarrito()} />
+      </div>
+
     </div>
+
 
   )
 }
