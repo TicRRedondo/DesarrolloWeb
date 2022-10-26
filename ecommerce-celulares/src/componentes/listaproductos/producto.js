@@ -37,8 +37,6 @@ function Producto(props) {
         </div>
       </div>
       <div className='cont-btn'>
-        {//<Button variant="outline-success" onClick={() => adicionarCarrito(props)}>Comprar</Button>
-        }
         <Boton nombre='Agregar' click={()=>adicionarCarrito()} />
       </div>
 

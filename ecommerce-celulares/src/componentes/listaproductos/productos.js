@@ -7,10 +7,11 @@ function Productos() {
   const productos = JSON.parse(localStorage.getItem("productos"));
 
   return (
-    <div className="cont-productos">
-        {
-          productos.map(
-            (item) => (
+    <ul className="cont-productos">
+      {
+        productos.map(
+          (item) => (
+            <li className='cont-prod'>
               <Producto
                 src={item.img}
                 marca={item.marca}
@@ -19,10 +20,11 @@ function Productos() {
                 caracteristicas={item.caracteristicas}
                 id={item.id}
               />
-            )
+            </li>
           )
-        }
-    </div>
+        )
+      }
+    </ul>
   )
 }
 

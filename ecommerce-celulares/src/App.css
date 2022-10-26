@@ -1,6 +1,5 @@
 *{
     font-size: medium;
-    overflow: hidden;
     max-width: 100%;
 }
 body{
@@ -11,4 +10,5 @@ body{
     font-size: 11pt;
     background-color: aliceblue;
     font-family: "Latoweb",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    overflow: auto;
 }
