@@ -5,22 +5,16 @@ function Producto(props) {
 
   const productos = JSON.parse(localStorage.getItem("productos"))
 
-
-  const adicionarCarrito = () => {
-
-    const productoAdicionado = productos.find(element => {
+  const verproducto = () => {
+    const productoSeleccionado = productos.find(element => {
       return element.id === props.id;
     });
-    if (localStorage.getItem("carrito") == null) {
-      localStorage.setItem("carrito", JSON.stringify([productoAdicionado]))
+    if (localStorage.getItem("seleccion") == null) {
+      localStorage.setItem("seleccion", JSON.stringify([productoSeleccionado]))
     }
     else {
-      const productosAdicionados = JSON.parse(localStorage.getItem("carrito"))
-      productosAdicionados.push(productoAdicionado)
-      localStorage.setItem("carrito", JSON.stringify(productosAdicionados))
+      localStorage.setItem("seleccion", JSON.stringify(productoSeleccionado))
     }
-
-
   }
 
   return (
@@ -37,7 +31,7 @@ function Producto(props) {
         </div>
       </div>
       <div className='cont-btn'>
-        <Boton nombre='Agregar' click={()=>adicionarCarrito()} />
+        <Boton nombre='Comprar' click={() => verproducto()} />
       </div>
 
     </div>
