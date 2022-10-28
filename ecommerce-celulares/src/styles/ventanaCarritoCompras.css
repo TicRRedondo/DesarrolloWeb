@@ -1,0 +1,26 @@
+
+#menuCarrito {
+display: block;
+  
+}
+.menuCarrito {
+  display: flex;
+  gap: 1rem;
+}
+
+.menuCarrito .carritoCompras a{
+  margin-bottom: 10px;
+  text-decoration: none;
+  
+}
+
+.rowMenu {
+  display: flex;
+}
+
+.menuCarritoTable, .menuCarritoTableTd{
+  padding: 0 80px;
+  border:1px solid black;
+  text-align: center;
+  
+}
