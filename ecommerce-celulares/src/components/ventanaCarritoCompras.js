@@ -1,54 +1,59 @@
 import { Fragment } from 'react'
 import '../styles/ventanaCarritoCompras.css'
-import '../styles/skeleton.css'
-import '../styles/normalize.css'
-import '../styles/custom.css'
+import DisplayData from "../resources/json/carritoCompras.json"
+
 
 export function VentanaCarritoCompras() {
+  
     return(
         <>
-
-<div id="menuCarrito" class="carritoCompras">
-        <div class="container">
-            <div class="row">
-                    <div class="rowMenu three column">
-                            <nav id="principal" class="menuCarrito">
-                                <a class="enlace" href="#">Lista De Productos</a>
-                                <a class="enlace" href="#">Carrito</a>
+<div className="contenedor">
+<div id="menuCarrito" className="carritoCompras">
+        <div className="contenedor">
+            <div className="row">
+                    <div className="rowMenu">
+                            <nav id="carritoMenu" className="menuCarrito">
+                                <a className="enlaceMenu" href="#">CARRITO DE COMPRAS</a>
                             </nav>
                     </div>
             </div>
         </div>
-            <div class="row">
-                    <div class="rowMenu three column">
-                            <table class="menuCarritoTable">
-                                <tr>
-                                    <td class="menuCarritoTableTd">Imágen</td>
-                                    <td class="menuCarritoTableTd">Cantidad</td>
-                                    <td class="menuCarritoTableTd">Producto</td>
-                                    <td class="menuCarritoTableTd">Valor</td>
-                                    <td class="menuCarritoTableTd">Total</td>
+            <div className="row">
+                    <div className="rowTable">
+                                <tbody className="menuCarritoTable">
+                                <tr className="carritoTablePrincipal">
+                                    <th className="carritoMenuTableTd">Imágen</th>
+                                    <th className="carritoMenuTableTd">Cantidad</th>
+                                    <th className="carritoMenuTableTd">Producto</th>
+                                    <th className="carritoMenuTableTd">Valor</th>
+                                    <th className="carritoMenuTableTd">Total</th>
                                 </tr>
-                                <tr>
-                                    <td class="menuCarritoTableTd"><img height="400px" src="../public/Img/curso1.jpg"></img></td>
-                                    <td class="menuCarritoTableTd">1</td>
-                                    <td class="menuCarritoTableTd">Curso</td>
-                                    <td class="menuCarritoTableTd">100$</td>
-                                    <td class="menuCarritoTableTd">100$</td>
+                                {DisplayData.map((item, index) => (
+                                <tr key={index}>
+                                    <td className="carritoMenuTableTd">
+                                        <img className="carritoThumb" src={item.thumbnail}></img>
+                                    </td>
+                                    <td className="carritoMenuTableTd">{item.totalItems}</td>
+                                    <td className="carritoMenuTableTd">{item.name}</td>
+                                    <td className="carritoMenuTableTd">{item.price}</td>
+                                    <td className="carritoMenuTableTd">{item.total}</td>
                                 </tr>
+                                     ))}
                                 <tr>
-                                    <td class="menuCarritoTableTd"><img height="400px" src="../public/Img/curso1.jpg"></img></td>
-                                    <td class="menuCarritoTableTd">1</td>
-                                    <td class="menuCarritoTableTd">Curso</td>
-                                    <td class="menuCarritoTableTd">100$</td>
-                                    <td class="menuCarritoTableTd">100$</td>
-                                </tr>
-
-                            </table>
+                                    <td></td>
+                                    <td></td>
+                                    <td className="carritoMenuTableTd">TOTAL</td>
+                                    <td className="carritoMenuTableTd">$999.999.999</td>
+                                </tr>                          
+                            </tbody>
+                            <div className="carritoBotones">
+                                     <button className="carritoBoton" type="button">Finalizar Compra</button>
+                                     <button className="carritoBoton" type="button">Cancelar</button>
+                                </div>       
                     </div>
             </div>
     </div>
-
+    </div>
 
         </>
 
